@@ -1,0 +1,52 @@
+.FormSearch{
+    background-color:  #E9ECEF;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.FormSearch button{
+    width: fit-content;
+    border: none;
+    color: rgb(20, 141, 172);
+    font-size: 14px;
+}
+
+.FormSearch button:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.FormSearch form{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.FormSearch form input{
+    padding: 5px 20px;
+}
+
+.FormSearch form .btn{
+    width: fit-content;
+    padding: 10px 20px;
+    background-color: #28A745;
+    color: white;
+    border: white 1px solid;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.ItemsContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ItemsContainer h2{
+    padding: 20px;
+}

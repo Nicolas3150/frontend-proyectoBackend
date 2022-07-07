@@ -1,0 +1,27 @@
+#productFormPut {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.productFormPut{
+    background-color:  #E9ECEF;
+    padding: 20px;
+}
+
+#productFormPut input {
+    padding: 5px 20px;
+}
+
+#productFormPut .btn {
+    width: fit-content;
+    padding: 10px 20px;
+    background-color: #28A745;
+    color: white;
+    border: white 1px solid;
+    border-radius: 5px;
+    cursor: pointer;
+}

@@ -1,0 +1,22 @@
+.NavBar{
+    background-color: rgb(25, 25, 25);
+    padding: 20px;
+}
+
+.NavBar ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+    list-style: none;
+}
+
+.NavBar ul li a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+.NavBar ul li:hover a{
+    color: rgb(20, 141, 172);
+}

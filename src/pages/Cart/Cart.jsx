@@ -1,11 +1,12 @@
 import React from 'react'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { API_URL } from '../../services';
 import ItemCart from '../../components/ItemCart/ItemCart';
 import './Cart.css'
 
 const Cart = () => {
   const [cart, setCart] = useState([])
+  const [cartCollection, setCartCollection] = useState([])
 
   const newCart = () => {
     fetch(`${API_URL}/carrito`, {
@@ -45,12 +46,29 @@ const Cart = () => {
       });
   }
 
+  useEffect(() => {
+    fetch(`${API_URL}/carrito`)
+      .then(response => response.json())
+      .then(carts => {
+        setCartCollection(carts)
+      })
+  }, [])
+
+  const changeIdCart = () => {
+      const text = document.querySelector('#idSelect').value
+      document.getElementById('id_cart').value = text
+  }
+
   return (
     <div>
       <div className='FormSearch'>
         <form>
-          <label>Ingrese el id de su carrito: </label>
-          <input type="text" name='id' id='id_cart' />
+          <label>Seleccione el id de su carrito: </label>
+          <select id="idSelect" onChange={ changeIdCart }>
+            {cartCollection.map(cart => <option value={cart.id}>{cart.id}</option>)}
+          </select>
+          <label> o ingreselo manualmente: </label>
+          <input type="text" name='id' id='id_cart'/>
           <input type="submit" value='Buscar' className='btn' onClick={getProductInCart} />
         </form>
         <button onClick={newCart}>Crear nuevo carrito</button>

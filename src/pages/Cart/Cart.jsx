@@ -50,7 +50,7 @@ const Cart = () => {
       <div className='FormSearch'>
         <form>
           <label>Ingrese el id de su carrito: </label>
-          <input type="number" name='id' id='id_cart' />
+          <input type="text" name='id' id='id_cart' />
           <input type="submit" value='Buscar' className='btn' onClick={getProductInCart} />
         </form>
         <button onClick={newCart}>Crear nuevo carrito</button>
